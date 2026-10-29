@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="John Nyambati — graphic design, video editing and content writing portfolio.">
+  <title>John Nyambati | Creative Portfolio</title>
+  <style>
+    :root{--bg:#0b1020;--panel:#111a30;--text:#f4f7ff;--muted:#aab5cc;--accent:#73a7ff;--line:#273451;--light:#eaf1ff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none} .wrap{width:min(1100px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(11,16,32,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 0}
+    .brand{font-weight:800;letter-spacing:-.04em}.brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:23px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:white}
+    .menu{display:none;background:none;color:white;border:1px solid var(--line);border-radius:10px;padding:7px 11px}
+    .hero{padding:94px 0 76px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:55px}
+    .eyebrow{color:var(--accent);font-weight:750;text-transform:uppercase;letter-spacing:.15em;font-size:.77rem}
+    h1{font-size:clamp(2.8rem,6vw,5.2rem);line-height:1.03;letter-spacing:-.065em;margin:17px 0 22px}
+    h1 em{font-style:normal;color:var(--accent)} .lead{font-size:1.12rem;color:var(--muted);max-width:610px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:29px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;font-weight:750;border:1px solid var(--line);transition:.2s}
+    .btn.primary{background:var(--accent);color:#081225;border-color:var(--accent)}.btn:hover{transform:translateY(-2px)}
+    .hero-card{border:1px solid var(--line);background:linear-gradient(145deg,#172544,#0e1528);border-radius:26px;padding:28px;min-height:330px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 25px 70px #0004}
+    .monogram{width:82px;height:82px;border-radius:23px;display:grid;place-items:center;font-size:2rem;font-weight:900;color:#071225;background:linear-gradient(135deg,#8dc0ff,#6f88ff)}
+    .hero-card h2{font-size:1.6rem;line-height:1.2;margin:26px 0 10px;letter-spacing:-.04em}.hero-card p{color:var(--muted);margin:0}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.chip{font-size:.78rem;border:1px solid #354464;padding:6px 10px;border-radius:99px;color:#d8e4ff}
+    section{padding:66px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:27px}
+    h2.section-title{font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.055em;line-height:1.1;margin:8px 0}
+    .section-head p{max-width:470px;color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:23px}
+    .project-art{height:150px;border-radius:13px;margin-bottom:20px;display:flex;align-items:end;padding:17px;overflow:hidden;position:relative}
+    .project-art:before{content:"";position:absolute;width:160px;height:160px;border:1px solid #ffffff55;border-radius:50%;right:-22px;top:-40px}
+    .project-art:after{content:"";position:absolute;width:95px;height:95px;border:1px solid #ffffff55;border-radius:50%;right:22px;top:12px}
+    .art1{background:linear-gradient(135deg,#164e63,#67e8f9)}.art2{background:linear-gradient(135deg,#4c1d95,#c084fc)}.art3{background:linear-gradient(135deg,#78350f,#fbbf24)}
+    .art-label{position:relative;z-index:1;color:#fff;font-size:1.05rem;font-weight:850;letter-spacing:-.03em;text-shadow:0 2px 12px #0006}
+    .card h3{margin:0 0 8px;font-size:1.15rem}.card p{margin:0;color:var(--muted);font-size:.94rem}
+    .tagline{font-size:.78rem;color:var(--accent);font-weight:750;margin-bottom:8px;text-transform:uppercase;letter-spacing:.1em}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.skill-icon{width:44px;height:44px;border-radius:12px;background:#1d2b49;display:grid;place-items:center;color:var(--accent);font-weight:900;font-size:1.15rem;margin-bottom:16px}
+    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px;align-items:start}
+    .about-panel{padding:28px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(140deg,#15213a,#10182b)}
+    .about-panel p{color:var(--muted);margin:0}.about-copy p{color:var(--muted);margin-top:0}
+    .contact{background:linear-gradient(135deg,#142747,#101629);border:1px solid var(--line);border-radius:26px;padding:clamp(25px,5vw,52px);display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+    .contact h2{font-size:clamp(2rem,4vw,3.3rem);line-height:1.08;letter-spacing:-.055em;margin:8px 0 15px}.contact p{color:var(--muted)}
+    .contact-links{display:grid;gap:11px}.contact-link{padding:13px 15px;border:1px solid #344463;border-radius:12px;overflow-wrap:anywhere}.contact-link strong{display:block;font-size:.78rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+    footer{padding:28px 0;color:var(--muted);font-size:.88rem;border-top:1px solid rgba(255,255,255,.08);margin-top:65px}
+    footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding:65px 0 45px;gap:28px}.hero-card{min-height:270px}.grid,.skills{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}.about,.contact{grid-template-columns:1fr}.navlinks{display:none;position:absolute;top:63px;left:4%;right:4%;padding:18px;background:#111a30;border:1px solid var(--line);border-radius:14px;flex-direction:column;gap:14px}.navlinks.open{display:flex}.menu{display:block}section{padding:48px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#home">JN<span>.</span></a>
+    <div class="navlinks" id="navlinks">
+      <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </div>
+    <button class="menu" id="menu" aria-label="Toggle navigation">Menu ☰</button>
+  </nav>
+</header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">Creative portfolio · Available for projects</div>
+      <h1>Ideas into <em>visuals</em><br>that connect.</h1>
+      <p class="lead">I'm John Nyambati — a creative freelancer working across graphic design, video editing, and content writing. I help people and brands share their message clearly and creatively.</p>
+      <div class="actions"><a class="btn primary" href="#work">Explore my work ↗</a><a class="btn" href="#contact">Let's work together</a></div>
+    </div>
+    <aside class="hero-card">
+      <div class="monogram">JN</div>
+      <div><h2>Creative thinking.<br>Clear communication.</h2><p>Design · Video · Words</p><div class="chips"><span class="chip">Graphic design</span><span class="chip">Video editing</span><span class="chip">Content writing</span></div></div>
+    </aside>
+  </div>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Selected projects</div><h2 class="section-title">A few things I can create.</h2></div><p>These are starter showcase concepts. Replace them with your real projects, images, and results as your portfolio grows.</p></div>
+      <div class="grid">
+        <article class="card"><div class="project-art art1"><span class="art-label">MAKE IT STAND OUT</span></div><div class="tagline">Graphic design</div><h3>Promotional poster</h3><p>A bold, readable promotional design for an event, service, or community brand.</p></article>
+        <article class="card"><div class="project-art art2"><span class="art-label">STORY IN MOTION</span></div><div class="tagline">Video editing</div><h3>Short-form video</h3><p>A social video concept with a clear hook, smooth pacing, subtitles, and music.</p></article>
+        <article class="card"><div class="project-art art3"><span class="art-label">WORDS WITH PURPOSE</span></div><div class="tagline">Content writing</div><h3>Brand content</h3><p>Audience-focused captions, short articles, and promotional copy with a clear message.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">What I offer</div><h2 class="section-title">Creative services.</h2></div><p>Flexible creative support for individuals, small businesses, churches, and growing brands.</p></div>
+      <div class="skills">
+        <article class="card"><div class="skill-icon">✳</div><h3>Graphic design</h3><p>Posters, social media graphics, event flyers, and promotional layouts designed to communicate clearly.</p></article>
+        <article class="card"><div class="skill-icon">▶</div><h3>Video editing</h3><p>Short-form videos, captions, visual storytelling, and clean edits for online platforms.</p></article>
+        <article class="card"><div class="skill-icon">Aa</div><h3>Content writing</h3><p>Social captions, simple articles, product descriptions, and engaging written content.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div><div class="eyebrow">A little about me</div><h2 class="section-title">Good work starts with understanding your message.</h2></div>
+      <div class="about-copy"><p>I'm John Nyambati, a developing creative professional with interests in graphic design, video editing, and content writing. I enjoy turning ideas into content that looks good, feels intentional, and speaks to the right audience.</p><p>I value clear communication, reliability, and learning with every project. If you have an idea to share or a project to bring to life, let's talk about it.</p><div class="chips"><span class="chip">Creative</span><span class="chip">Detail-focused</span><span class="chip">Open to collaboration</span></div></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div><div class="eyebrow">Have a project?</div><h2>Let's make something meaningful.</h2><p>Tell me what you're working on and what you need. I’ll be happy to discuss the project, timeline, and next steps.</p><a class="btn primary" href="mailto:Johnwillia421@gmail.com?subject=Project%20enquiry">Email me ↗</a></div>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:Johnwillia421@gmail.com"><strong>Email</strong>Johnwillia421@gmail.com</a>
+        <div class="contact-link"><strong>Services</strong>Graphic design · Video editing · Content writing</div>
+        <div class="contact-link"><strong>Location</strong>Kenya · Available for remote work</div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>© <span id="year"></span> John Nyambati. All rights reserved.</span><span>Built to share ideas clearly.</span></div></footer>
+<script>
+  const menu = document.getElementById('menu');
+  const links = document.getElementById('navlinks');
+  menu.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
